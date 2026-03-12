@@ -3,63 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Han Sangwon | Web Architect</title>
+    <title>Han Sangwon | Web Developer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="cursor"></div>
-
-    <nav class="glass-nav">
-        <div class="logo bebas">HS</div>
-        <div class="nav-items">
-            <a href="#about">About</a>
-            <a href="#career">Career</a>
-            <a href="#resources">Tools</a>
-            <a href="#games">Play</a>
-        </div>
+    <nav class="navbar">
+        <div class="logo">HAN SANGWON</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#games">Games</a></li>
+        </ul>
     </nav>
 
-    <header class="hero">
+    <header id="home" class="hero">
         <div class="hero-content">
-            <h1 class="bebas main-title">HAN SANGWON</h1>
-            <p class="tag">WEB APP DEVELOPER // SYSTEM ARCHITECT</p>
+            <h1>HAN SANGWON</h1>
+            <p>Web Application Developer</p>
+            <div class="profile-img-container">
+                <img src="https://via.placeholder.com/200" alt="Han Sangwon" class="profile-pic">
+            </div>
         </div>
     </header>
 
-    <main class="bento-grid">
-        <section id="about" class="bento-item tall glass">
-            <h2 class="bebas">Profile</h2>
-            <p>I am Han Sangwon. I build digital environments that are adaptive and precise. My philosophy is simple: complexity hidden behind a minimalist interface.</p>
-        </section>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a dedicated Web App Developer with a passion for building clean, efficient, and user-centric digital experiences. I specialize in turning complex problems into minimalist, high-performance web applications using modern technologies.</p>
+    </section>
 
-        <section id="career" class="bento-item wide glass">
-            <h2 class="bebas">Career</h2>
-            <div class="career-flex">
-                <div class="job"><h3>2024</h3><p>Junior Developer</p></div>
-                <div class="job"><h3>2025</h3><p>App Architect</p></div>
-                <div class="job"><h3>2026</h3><p>Lead Engineer</p></div>
-            </div>
-        </section>
+    <section id="career" class="section bg-light">
+        <h2>Career</h2>
+        <div class="career-item">
+            <h3>Senior Web Developer</h3>
+            <p>Leading front-end architecture and optimizing user workflows for scalable web platforms.</p>
+        </div>
+        <div class="career-item">
+            <h3>App Specialist</h3>
+            <p>Focused on responsive design and seamless JavaScript integration for mobile-first experiences.</p>
+        </div>
+    </section>
 
-        <section id="resources" class="bento-item glass">
-            <h2 class="bebas">Resources</h2>
-            <div class="upload-zone" id="drop-zone">
-                <p>UPLOAD_FILE</p>
-                <input type="file" id="file-input" hidden>
-            </div>
-        </section>
+    <section id="resources" class="section">
+        <h2>Upload Resources</h2>
+        <div class="upload-container">
+            <input type="file" id="fileInput" hidden>
+            <button class="btn" onclick="document.getElementById('fileInput').click()">Choose File</button>
+            <p id="fileName">No file chosen</p>
+        </div>
+    </section>
 
-        <section id="games" class="bento-item glass">
-            <h2 class="bebas">Playground</h2>
-            <div class="game-display">
-                <span id="score">00</span>
-                <button id="game-btn" class="bebas">START</button>
-                <span id="timer">05</span>
-            </div>
-        </section>
-    </main>
+    <section id="games" class="section bg-light">
+        <h2>Source Mini Games</h2>
+        <div class="game-card">
+            <h3>Clicker Challenge</h3>
+            <p>Score: <span id="score">0</span></p>
+            <button class="btn" onclick="playGame()">Click Me!</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Han Sangwon. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
