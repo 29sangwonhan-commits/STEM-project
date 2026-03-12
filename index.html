@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Han Sangwon | Portfolio</title>
+    <title>Han Sangwon | Web Architect</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -11,9 +11,9 @@
 
     <div class="cursor"></div>
 
-    <nav class="nav">
+    <nav class="glass-nav">
         <div class="logo bebas">HS</div>
-        <div class="menu">
+        <div class="nav-items">
             <a href="#about">About</a>
             <a href="#career">Career</a>
             <a href="#resources">Tools</a>
@@ -22,61 +22,44 @@
     </nav>
 
     <header class="hero">
-        <div class="hero-bg-text bebas">DEVELOPER</div>
         <div class="hero-content">
-            <div class="image-reveal">
-                <img src="https://via.placeholder.com/200" alt="Han Sangwon" class="profile-img">
-            </div>
-            <h1 class="bebas">HAN SANGWON</h1>
-            <p class="typewriter">Building the future of web applications.</p>
+            <h1 class="bebas main-title">HAN SANGWON</h1>
+            <p class="tag">WEB APP DEVELOPER // SYSTEM ARCHITECT</p>
         </div>
     </header>
 
-    <section id="about" class="section">
-        <div class="glass-box">
-            <h2 class="bebas">THE PROFILE</h2>
-            <p>I am a Web App Developer focused on high-performance architecture. I believe in **minimalism**, where every pixel serves a purpose. As Gemini mentioned, I am grounded, adaptive, and precise.</p>
-        </div>
-    </section>
+    <main class="bento-grid">
+        <section id="about" class="bento-item tall glass">
+            <h2 class="bebas">Profile</h2>
+            <p>I am Han Sangwon. I build digital environments that are adaptive and precise. My philosophy is simple: complexity hidden behind a minimalist interface.</p>
+        </section>
 
-    <section id="career" class="section">
-        <h2 class="bebas section-title">CAREER PATH</h2>
-        <div class="timeline">
-            <div class="step">
-                <span class="year">2024</span>
-                <h3>Web Architecture</h3>
-                <p>Mastering the core of the web: HTML, JS, and CSS.</p>
+        <section id="career" class="bento-item wide glass">
+            <h2 class="bebas">Career</h2>
+            <div class="career-flex">
+                <div class="job"><h3>2024</h3><p>Junior Developer</p></div>
+                <div class="job"><h3>2025</h3><p>App Architect</p></div>
+                <div class="job"><h3>2026</h3><p>Lead Engineer</p></div>
             </div>
-            <div class="step">
-                <span class="year">2025</span>
-                <h3>UI/UX Engineering</h3>
-                <p>Creating seamless digital human-computer interactions.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="resources" class="section">
-        <div class="upload-container">
-            <h2 class="bebas">RESOURCE UPLOAD</h2>
-            <div class="drop-zone" id="drop-zone">
-                <span class="plus">+</span>
-                <p>Drag files or <span class="browse">Browse</span></p>
+        <section id="resources" class="bento-item glass">
+            <h2 class="bebas">Resources</h2>
+            <div class="upload-zone" id="drop-zone">
+                <p>UPLOAD_FILE</p>
                 <input type="file" id="file-input" hidden>
             </div>
-            <div id="file-list"></div>
-        </div>
-    </section>
+        </section>
 
-    <section id="games" class="section">
-        <div class="game-ui">
-            <h2 class="bebas">CLICK REACTION</h2>
-            <div class="stat-row">
-                <div class="stat">TIME: <span id="timer">05</span></div>
-                <div class="stat">SCORE: <span id="score">00</span></div>
+        <section id="games" class="bento-item glass">
+            <h2 class="bebas">Playground</h2>
+            <div class="game-display">
+                <span id="score">00</span>
+                <button id="game-btn" class="bebas">START</button>
+                <span id="timer">05</span>
             </div>
-            <button id="game-btn" class="bebas">INITIATE</button>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
