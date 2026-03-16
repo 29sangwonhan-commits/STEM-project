@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Han Sangwon | Web Developer</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">HAN SANGWON</div>
+        <div class="logo">MyBrand</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#career">Career</a></li>
             <li><a href="#resources">Resources</a></li>
@@ -20,53 +19,56 @@
         </ul>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1>HAN SANGWON</h1>
-            <p>Web Application Developer</p>
-            <div class="profile-img-container">
-                <img src="https://via.placeholder.com/200" alt="Han Sangwon" class="profile-pic">
-            </div>
+    <header class="hero">
+        <div class="header-content">
+            <img src="profile.png" alt="Profile Picture" class="profile-img">
+            <h1>Welcome to My Space</h1>
+            <p>Student | Tech Enthusiast | Creator</p>
         </div>
     </header>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I am a dedicated Web App Developer with a passion for building clean, efficient, and user-centric digital experiences. I specialize in turning complex problems into minimalist, high-performance web applications using modern technologies.</p>
-    </section>
+    <main>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Based on our interaction, I see a student who isn't afraid to experiment with digital filters and modern tech. You're someone who values both the technical side of development and the fun, creative side of social interaction. Whether it's coding a clean UI or exploring the latest app features, you're all about blending style with substance.</p>
+        </section>
 
-    <section id="career" class="section bg-light">
-        <h2>Career</h2>
-        <div class="career-item">
-            <h3>Senior Web Developer</h3>
-            <p>Leading front-end architecture and optimizing user workflows for scalable web platforms.</p>
-        </div>
-        <div class="career-item">
-            <h3>App Specialist</h3>
-            <p>Focused on responsive design and seamless JavaScript integration for mobile-first experiences.</p>
-        </div>
-    </section>
+        <section id="career" class="section grey-bg">
+            <h2>Career</h2>
+            <div class="career-item">
+                <h3>Current Goal</h3>
+                <p>Developing expertise in Front-End Development (HTML, CSS, JS) and building interactive web experiences.</p>
+            </div>
+            <div class="career-item">
+                <h3>Skills</h3>
+                <p>Web Design, UI/UX Research, and Rapid Prototyping.</p>
+            </div>
+        </section>
 
-    <section id="resources" class="section">
-        <h2>Upload Resources</h2>
-        <div class="upload-container">
-            <input type="file" id="fileInput" hidden>
-            <button class="btn" onclick="document.getElementById('fileInput').click()">Choose File</button>
-            <p id="fileName">No file chosen</p>
-        </div>
-    </section>
+        <section id="resources" class="section">
+            <h2>Upload Resources</h2>
+            <div class="upload-container">
+                <input type="file" id="fileUpload" hidden>
+                <label for="fileUpload" class="btn-primary">Choose File</label>
+                <p id="fileName">No file chosen</p>
+                <button class="btn-secondary" onclick="uploadFile()">Upload Now</button>
+            </div>
+        </section>
 
-    <section id="games" class="section bg-light">
-        <h2>Source Mini Games</h2>
-        <div class="game-card">
-            <h3>Clicker Challenge</h3>
-            <p>Score: <span id="score">0</span></p>
-            <button class="btn" onclick="playGame()">Click Me!</button>
-        </div>
-    </section>
+        <section id="games" class="section grey-bg">
+            <h2>Source Mini Games</h2>
+            <div class="game-box">
+                <h3>Number Guesser</h3>
+                <p>Guess a number between 1 and 10!</p>
+                <input type="number" id="guessInput" placeholder="Enter number">
+                <button class="btn-primary" onclick="playGame()">Guess</button>
+                <p id="gameResult"></p>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Han Sangwon. All Rights Reserved.</p>
+        <p>&copy; 2026 Student Portfolio. Minimalist Design.</p>
     </footer>
 
     <script src="script.js"></script>
